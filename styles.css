@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin:0;
+}
+/*|==========================|HERO|==========================|*/
+.hero{
+    box-shadow: inset 0 0 20px 2px #860000; 
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 100vh;
+    background: linear-gradient(62deg, #3a3d40 0%, #000000 100%); 
+    background-color: black;
+    animation: frame_border 15s linear infinite;
+}
+.name_container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.hero .name{
+    margin:0;
+    color: #1c1c1c;
+    text-align: center;
+    font-size: 600%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+}
+.moving_ball{
+    width:100%;
+    height:100vh;
+    border-radius: 50%;
+    transform-origin:left;
+    filter: blur(20px);
+    animation: moving_ball_animator 10s linear infinite;
+    display: none;
+}
+
+@keyframes frame_border {
+    0% {
+        box-shadow: inset 0 0 20px 2px #340086;
+    }
+    10% {
+        box-shadow: inset 0 0 20px 2px #00865d;
+    }
+    20% {
+        box-shadow: inset 0 0 20px 2px #860000;
+    }
+    30% {
+        box-shadow: inset 0 0 20px 2px #004080;
+    }
+    40% {
+        box-shadow: inset 0 0 20px 2px #800040;
+    }
+    50% {
+        box-shadow: inset 0 0 20px 2px #008080;
+    }
+    60% {
+        box-shadow: inset 0 0 20px 2px #804000;
+    }
+    70% {
+        box-shadow: inset 0 0 20px 2px #800000;
+    }
+    80% {
+        box-shadow: inset 0 0 20px 2px #004040;
+    }
+    90% {
+        box-shadow: inset 0 0 20px 2px #008000;
+    }
+    100% {
+        box-shadow: inset 0 0 20px 2px #340086;
+    }
+}
+
