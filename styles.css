@@ -1,47 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 body{
     margin:0;
+    padding-top: 70px;
+    background: linear-gradient(62deg, rgb(116, 57, 167) 0%, #002089 100%); 
 }
 /*|==========================|HERO|==========================|*/
+nav{
+    top:0;
+    height:70px;
+    width: 100%;
+    position: fixed;
+    display:flex;
+    justify-content:space-between;
+}
+nav .title{
+    margin-left:100px;
+    display:flex;
+    align-items: center;
+}
+.title img{
+    width:209px;
+    margin-bottom: 15px
+}
+.title p{
+    color: white;
+    font-family: sans-serif;
+    margin:0;
+    font-size: 30px;
+    cursor:default;
+}
+nav ul{
+    margin:0;
+    margin-right: 100px;
+    height: 100%;
+    padding:0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
 .hero{
-    box-shadow: inset 0 0 20px 2px #860000; 
     margin:0;
     padding:0;
     width:100%;
     height: 100vh;
-    background: linear-gradient(62deg, #3a3d40 0%, #000000 100%); 
-    background-color: black;
-    animation: frame_border 15s linear infinite;
+    background: linear-gradient(62deg, #7439a7 0%, #002089 100%); 
+    display:flex;
+    /*
+    animation: frame_border_animation 15s linear infinite;
+    box-shadow: inset 0 0 20px 2px #860000;
+    */
 }
-.name_container{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-}
-.hero .name{
-    margin:0;
-    color: #1c1c1c;
-    text-align: center;
-    font-size: 600%;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-
-}
-.moving_ball{
-    width:100%;
-    height:100vh;
-    border-radius: 50%;
-    transform-origin:left;
-    filter: blur(20px);
-    animation: moving_ball_animator 10s linear infinite;
-    display: none;
-}
-
-@keyframes frame_border {
+@keyframes frame_border_animation {
     0% {
         box-shadow: inset 0 0 20px 2px #340086;
     }
@@ -77,3 +94,86 @@ body{
     }
 }
 
+.name_container{
+    margin: auto auto;
+    max-width: 800px;
+}
+.hero .name{
+    margin:0;
+    text-align: center;
+    font-size: 109px;
+    font-family: "Montserrat",sans-serif;
+    font-style: normal;
+    
+    animation: start_blur_animation linear 0.3s 1;
+    
+    color: #dbdbdb;
+    filter: blur(0px);
+    transition: transform 0.1s linear;
+}
+.hero .name:hover{
+    transform: scale(1.3);
+    cursor:default;
+    user-select: none;
+}
+.hero .name:active{
+    animation: continue_blur_animation linear 0.3s 1;
+}
+@keyframes continue_blur_animation{
+    0% {
+        box-shadow: inset 0 0 20px 2px rgba(52, 0, 134, 0);
+    }
+}
+@keyframes start_blur_animation{
+    0%{
+        filter: blur(10px);
+    }
+    100%{
+        filter: blur(0px)
+    }
+}
+.hero .description{
+    color: #dbdbdb;
+    font-family: Montserrat;
+    text-align: center;
+    transition: transform 0.1s linear;
+    cursor:default;
+    user-select: none;
+}
+.hero .description:hover{
+    transform: scale(1.5);
+}
+.moving_ball{
+    width:100%;
+    height:100vh;
+    border-radius: 50%;
+    transform-origin:left;
+    filter: blur(20px);
+    animation: moving_ball_animator 10s linear infinite;
+    display: none;
+}
+.arrow_down_circle{
+    width:100px;
+    height:100px;
+    border: 4px solid #d6d6d6;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+    transition: transform 0.1s linear;
+}
+.arrow_down_circle:hover{
+    transform: scale(1.2);
+}
+.arrow_down_circle>.arrow{
+    position:relative;
+    text-align: center;
+    font-size: 70px;
+    font-family:sans-serif;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+    color: #dbdbdb;
+    cursor:default;
+    user-select: none;
+}
