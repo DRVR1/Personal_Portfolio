@@ -23,6 +23,7 @@ nav .title{
     align-items: center;
 }
 nav ul{
+    text-align: center;
     margin:0;
     margin-right: 100px;
     max-width: auto;
@@ -33,25 +34,17 @@ nav ul{
     justify-content: center;
     list-style-type: none;
 }
-
-
-
-
-nav ul li::before{
-    content: "";
-    margin-left:85px;
-    margin-top:41px;
-    height: 3px;
-    width: 0;
-    border-radius: 50px;
-    background: #ffffff;
-    position: absolute;
-    transform: translate(-50%,-50%);
+nav .deco{
+    margin: 0 auto;
+    width:0%;
+    height: 2px;
+    background-color: #ffffff;
+    color:white;
     transition: 0.5s;
 }
 
-nav ul li:hover::before{
-    width: 120px;
+nav a:hover + .deco{
+    width:60%;
 }
 
 @media (max-width:1117px) {
@@ -135,6 +128,16 @@ nav a{
 @media (max-width:390px) {
     .hero{
         height:160vh;
+    }
+}
+@media (max-width:376px) {
+    .hero{
+        height:175vh;
+    }
+}
+@media (max-width:340px) {
+    .hero{
+        height:190vh;
     }
 }
 @keyframes frame_border_animation {
@@ -253,6 +256,8 @@ nav a{
     .hero .description{
         display: block;
     }
+    .hero .square{
+    }
 }
 .hero .square{
     text-align: center;
@@ -290,6 +295,9 @@ nav a{
 }
 .arrow_down_circle:hover{
     transform: scale(1.2);
+}
+.arrow_down_circle:active{
+    transform: rotate(180deg);
 }
 .arrow_down_circle>.arrow{
     position:relative;
