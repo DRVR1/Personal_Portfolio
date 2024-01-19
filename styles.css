@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     margin:0;
 }
@@ -8,11 +9,11 @@ body{
 nav{
     /*background: linear-gradient(62deg, rgb(180, 0, 0) 0%, #0027a5 100%); */
     z-index: 123;
-    background-color:rgba(80, 67, 137, 0.8);
+    background-color:rgba(80, 67, 137, 0);
     top:0;
     height:70px;
     width: 100%;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     position: fixed;
     display:flex;
     justify-content:space-between;
@@ -78,13 +79,15 @@ nav a:hover + .deco{
     margin-right:10px;
 }
 .title p{
-    color: #ace9ff;
-    font-family: 'raleway';
+    color: #ffffff;
+    font-family: 'Montserrat Alternates', sans-serif;
     margin:0;
     font-size: 30px;
     cursor:default;
 }
-
+.initials{
+    color:#75ffff;
+}
 nav a{
     margin: 0 30px;
     font-family: 'Montserrat', sans-serif;
@@ -297,13 +300,13 @@ nav a{
     transform: scale(1.2);
 }
 .arrow_down_circle:active{
-    transform: rotate(180deg);
+    transform: scale(1);
 }
 .arrow_down_circle>.arrow{
     position:relative;
     text-align: center;
     font-size: 70px;
-    font-family:sans-serif;
+    font-family:'monserrat';
     top:50%;
     left:50%;
     transform: translate(-50%,-50%) rotate(90deg);
@@ -320,7 +323,7 @@ nav a{
 }
 .projects .profile_container{
     background-color: white;
-    max-width:500px;
+    max-width:900px;
     max-height:500px;
     box-shadow: 3px 3px 10px 10px rgb(0, 12, 78);
     margin: 0 auto;
