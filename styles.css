@@ -6,15 +6,14 @@ body{
     margin:0;
 }
 /*|==========================|HERO|==========================|*/
-nav{
-    background-color:rgb(11, 0, 70);
+.static_navbar{
     height:70px;
     width: 100%;
     backdrop-filter: blur(15px);
     display:flex;
     justify-content:space-between;
 }
-nav .title{
+.static_navbar .title{
     height: 100%;
     padding:0;
     display: flex;
@@ -22,7 +21,7 @@ nav .title{
     justify-content: center;
     margin-left:100px;
 }
-nav ul{
+.static_navbar ul{
     text-align: center;
     margin:0;
     margin-right: 100px;
@@ -34,7 +33,7 @@ nav ul{
     justify-content: center;
     list-style-type: none;
 }
-nav .deco{
+.static_navbar .deco{
     margin: 0 auto;
     width:0%;
     height: 2px;
@@ -43,50 +42,67 @@ nav .deco{
     transition: 0.5s;
 }
 
-nav a:hover + .deco{
+.static_navbar a:hover + .deco{
     width:60%;
 }
 
-@media (max-width:1117px) {
-    nav{
-        display:block;
-        justify-content:center;
-    }
-    nav .title{
-        margin:0;
-    }
-    nav ul{
-        margin: 0;
-    }
-}
+
 .mobile_menu{
-    position:absolute;
+    position:fixed;
     z-index: 1;
     width:100%;
     height:100%;
     display: none;
+    background-color: rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(12px);
+}
+.back_button{
+    width:30%;
+}
+.mobile_menu_toolbar{
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    border-left: 10px solid #676767;
+    z-index: 2;
+    overflow: auto;
+    margin-left:auto;
+    width:70%;
+    height:100%;
+    display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.91);
+    justify-content:flex-start;
+    background-color: rgb(23, 23, 23);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
+.logo{
+    width:140px;
+    margin: 0 auto;
+    margin-top:70px;
+}
+
 .mobile_menu ul{
     padding:0;
     display: block;
-    list-style: none;
+    list-style:none;
     text-align: center;
     
 }
 .mobile_menu a{
     font-size:40px;
     color: white;
-    text-decoration: none;
+    text-decoration:none;
     font-family: 'Montserrat Alternates',sans-serif;
 }
 .mobile_menu li{
-    margin: 30px 0;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: rgba(51, 51, 51, 0.36);
+    margin: 40px 0;
+    margin-left:10px;
+    box-shadow: 10px 10px 10px black;
 }
-.burger-menu {
+.burger_menu {
   border-radius: 10px;
   z-index: 2;
   width: 70px;
@@ -98,14 +114,27 @@ nav a:hover + .deco{
   cursor: pointer;
   align-items: center;
 }
-@media (max-width:657px) {
-    nav{
+@media (max-width:967px) {
+    .static_navbar{
         display:none;
     }
-    .burger-menu{
+    .burger_menu{
+       display:flex;
+    }
+    .hero{
         display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
     }
 }
+.visible{
+    display:flex;
+}
+.invisible{
+    display:none;
+}
+
 .burger-menu:active + .mobile_menu{
     display:flex;
 }
@@ -123,17 +152,18 @@ nav a:hover + .deco{
     width:60px;
     margin-right:10px;
 }
-.title p{
+.nav_title{
     color: #ffffff;
     font-family: 'Montserrat Alternates', sans-serif;
     margin:0;
     font-size: 30px;
+    text-align: center;
     cursor:default;
 }
 .initials{
     color:#75ffff;
 }
-nav a{
+.static_navbar a{
     margin: 0 30px;
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -145,19 +175,21 @@ nav a{
     margin:0;
     padding:0;
     width:100%;
+    min-height:100vh;
     background: linear-gradient(62deg, #7439a7 0%, #002089 100%); 
-    display:flex;
+    overflow: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:70px;
     /*
     animation: frame_border_animation 15s linear infinite;
     box-shadow: inset 0 0 20px 2px #860000;
     */
 }
+
 /*
-@media (max-width:670px) {
-    .hero{
-        height:110vh;
-    }
-}
 @media (max-width:605px) {
     .hero{
         height:120vh;
@@ -225,9 +257,7 @@ nav a{
     }
 }
 
-.name_container{
-    margin: 7vh auto;
-}
+
 /*
 @media (max-width:670px){
     .name_container{
@@ -255,14 +285,14 @@ nav a{
     text-align: center;
 }
 .hero img{
-    width:140px;
+    width:70px;
 }
 
 
 .hero .name{
     margin:0;
     text-align: center;
-    font-size: 100px;
+    font-size: 60px;
     font-family: "Montserrat",sans-serif;
     font-style: normal;
     
@@ -308,6 +338,7 @@ nav a{
     display: flex;
     justify-content: center;
     margin-top:20px;
+    
 }
 .hero .square{
     text-align: center;
