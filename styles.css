@@ -7,21 +7,20 @@ body{
 }
 /*|==========================|HERO|==========================|*/
 nav{
-    /*background: linear-gradient(62deg, rgb(180, 0, 0) 0%, #0027a5 100%); */
-    z-index: 123;
-    background-color:rgba(80, 67, 137, 0);
-    top:0;
+    background-color:rgb(11, 0, 70);
     height:70px;
     width: 100%;
     backdrop-filter: blur(15px);
-    position: fixed;
     display:flex;
     justify-content:space-between;
 }
 nav .title{
-    margin-left:100px;
-    display:flex;
+    height: 100%;
+    padding:0;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    margin-left:100px;
 }
 nav ul{
     text-align: center;
@@ -49,29 +48,75 @@ nav a:hover + .deco{
 }
 
 @media (max-width:1117px) {
-    nav .title{
-        display:none;
-    }
     nav{
+        display:block;
         justify-content:center;
+    }
+    nav .title{
+        margin:0;
     }
     nav ul{
         margin: 0;
     }
-    body{
-        /*padding-top: 70px;*/
+}
+.mobile_menu{
+    position:absolute;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    display: none;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.91);
+}
+.mobile_menu ul{
+    padding:0;
+    display: block;
+    list-style: none;
+    text-align: center;
+    
+}
+.mobile_menu a{
+    font-size:40px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat Alternates',sans-serif;
+}
+.mobile_menu li{
+    margin: 30px 0;
+}
+.burger-menu {
+  border-radius: 10px;
+  z-index: 2;
+  width: 70px;
+  position: fixed;
+  top:50px;
+  right:20px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  align-items: center;
+}
+@media (max-width:657px) {
+    nav{
+        display:none;
+    }
+    .burger-menu{
+        display: flex;
     }
 }
-@media (max-width:510px) {
-    nav{
-        height: 190px;
-    }
-    nav ul{
-        display: block;
-    }
-    nav ul li{
-        margin: 10px 0px;
-    }
+.burger-menu:active + .mobile_menu{
+    display:flex;
+}
+.bar {
+  box-shadow: 0px 0px 5px 4px #000000;
+  border-radius: 50px;
+  margin: 0 auto;
+  width: 90%;
+  height: 6px;
+  background-color: #ffffff;
+  margin: 7px 0;
 }
 
 .title img{
@@ -100,7 +145,6 @@ nav a{
     margin:0;
     padding:0;
     width:100%;
-    height: 100vh;
     background: linear-gradient(62deg, #7439a7 0%, #002089 100%); 
     display:flex;
     /*
@@ -108,6 +152,7 @@ nav a{
     box-shadow: inset 0 0 20px 2px #860000;
     */
 }
+/*
 @media (max-width:670px) {
     .hero{
         height:110vh;
@@ -143,6 +188,7 @@ nav a{
         height:190vh;
     }
 }
+*/
 @keyframes frame_border_animation {
     0% {
         box-shadow: inset 0 0 20px 2px #340086;
@@ -180,8 +226,9 @@ nav a{
 }
 
 .name_container{
-    margin: auto auto;
+    margin: 7vh auto;
 }
+/*
 @media (max-width:670px){
     .name_container{
         margin-top:14%;
@@ -202,6 +249,8 @@ nav a{
         margin-top:60%;
     }
 }
+*/
+
 .hero .img_container{
     text-align: center;
 }
@@ -213,7 +262,7 @@ nav a{
 .hero .name{
     margin:0;
     text-align: center;
-    font-size: 109px;
+    font-size: 100px;
     font-family: "Montserrat",sans-serif;
     font-style: normal;
     
@@ -228,8 +277,14 @@ nav a{
     cursor:default;
     user-select: none;
 }
+@media( max-width:657px){
+    .hero .name:hover{
+        transform: none;
+    }
+}
+
 .hero .name:active{
-    animation: continue_blur_animation linear 0.3s 1;
+    
 }
 @keyframes continue_blur_animation{
     0% {
@@ -247,20 +302,12 @@ nav a{
 .hero .description{
     color: #dbdbdb;
     font-family: Montserrat;
-    text-align: center;
     transition: transform 0.1s linear;
     cursor:default;
     user-select: none;
     display: flex;
     justify-content: center;
     margin-top:20px;
-}
-@media(max-width:604px){
-    .hero .description{
-        display: block;
-    }
-    .hero .square{
-    }
 }
 .hero .square{
     text-align: center;
@@ -269,12 +316,27 @@ nav a{
     padding:0 30px;
     border-radius: 10px;
     transition: transform 0.1s linear;
+  display: flex;
+  align-items: center; /* Vertical alignment */
 }
 .square p{
     font-size: 20px;
 }
 .hero .square:hover{
     transform: scale(1.2);
+}
+
+@media(max-width:604px){
+    .hero .description{
+        display: block;
+    }
+    .hero .square{
+        margin-top:30px;
+        margin-left:auto;
+        margin-right:auto;
+        width:60%;
+        display: block;
+    }
 }
 
 .moving_ball{
