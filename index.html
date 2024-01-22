@@ -12,66 +12,86 @@
   <nav>
   </nav>
   <body>
-      <div id="mobile_menu" class="mobile_menu">
-          <div class="back_button"></div>
-          <div class="mobile_menu_toolbar" id="#mobile_menu_toolbar">
-              <img class="logo" src="https://secure.webtoolhub.com/static/resources/icons/set181/5be2d6ea.png">
-                <p class="nav_title"><span class="initials">I</span>an <span class="initials">V</span>idmar</p>
-              <ul>
-                <li><a href="#asd"><i class="bi bi-house-fill"></i> Home</a><div class="deco"></div></li>
-                <li><a href="#asd"><i class="bi bi-person-fill"></i> Profile</a><div class="deco"></div></li>
-                <li><a href="#asd"><i class="bi bi-file-earmark-code-fill"></i> Projects</a><div class="deco"></div></li>
-                <li><a href="#asd"><i class="bi bi-basket2-fill"></i> Services</a><div class="deco"></div></li>
-              </ul>
-          </div>
+      <div class="full_container">
+          <div id="mobile_menu" class="mobile_menu slide_in_class">
+              <div class="back_button"></div>
+              <div class="mobile_menu_toolbar" id="#mobile_menu_toolbar">
+                  <img class="logo" src="https://secure.webtoolhub.com/static/resources/icons/set181/5be2d6ea.png">
+                    <p class="nav_title"><span class="initials">I</span>an <span class="initials">V</span>idmar</p>
+                  <ul>
+                    <li><a href="#hero"><i class="bi bi-house-fill"></i> Home</a><div class="deco"></div></li>
+                    <li><a href="#profile"><i class="bi bi-person-fill"></i> Profile</a><div class="deco"></div></li>
+                    <li><a href="#projects"><i class="bi bi-file-earmark-code-fill"></i> Projects</a><div class="deco"></div></li>
+                    <li><a href="#asd"><i class="bi bi-basket2-fill"></i> Services</a><div class="deco"></div></li>
+                  </ul>
+              </div>
 
-      </div>
-      <div class="navbar_separator"></div>
-      <div class="hero">
-          <div class="static_navbar">
-              <div class="title">
-                <img src="https://secure.webtoolhub.com/static/resources/icons/set181/5be2d6ea.png">
-                <p class="nav_title"><span class="initials">I</span>an <span class="initials">V</span>idmar</p>
-              </div>
-              <ul>
-                <li><a href="#asd">Home</a><div class="deco"></div></li>
-                <li><a href="#asd">Profile</a><div class="deco"></div></li>
-                <li><a href="#asd">Projects</a><div class="deco"></div></li>
-                <li><a href="#asd">Services</a><div class="deco"></div></li>
-              </ul>
           </div>
+          <div class="navbar_separator"></div>
+          <div class="page hero" id="hero">
+              <div class="static_navbar">
+                  <div class="title">
+                    <img src="https://secure.webtoolhub.com/static/resources/icons/set181/5be2d6ea.png">
+                    <p class="nav_title"><span class="initials">I</span>an <span class="initials">V</span>idmar</p>
+                  </div>
+                  <ul>
+                    <li><a href="#hero">Home</a><div class="deco"></div></li>
+                    <li><a href="#profile">Profile</a><div class="deco"></div></li>
+                    <li><a href="#projects">Projects</a><div class="deco"></div></li>
+                    <li><a href="#asd">Services</a><div class="deco"></div></li>
+                  </ul>
+              </div>
 
-          <div id="burger_button" class="burger_menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+              <div id="burger_button" class="burger_menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+              </div>
+              <div class="name_container">
+                <div class="img_container">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png">
+                </div>
+                <h1 class="name">Hey, I'm Ian</h1>
+                <div class="description">
+                  <div class="square">
+                    <p><i class="bi bi-gear"></i> Engineer</p>
+                  </div>
+                  <div class="square">
+                    <p><i class="bi bi-brush"></i> Website designer</p>
+                  </div>
+                  <div class="square">
+                    <p><i class="bi bi-code-square"></i> Programmer</p>
+                  </div>
+                </div>
+                <div class="arrow_down_circle" onclick="scrollToSection('profile')">
+                    <a class="arrow" onclick="scrollToSection('profile')">></a>
+                </div>
+              </div>
           </div>
-          <div class="name_container">
-            <div class="img_container">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png">
-            </div>
-            <h1 class="name">Hey, I'm Ian</h1>
-            <div class="description">
-              <div class="square">
-                <p>Engineer</p>
+          <div class="page profile" id="profile">
+              <div class="blur">
+                  <div class="profile_container">
+                    <img class="profile_photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png">
+                    <h1>Ian Vidmar</h1>
+                    <p>
+                        Mi nombre es Ian y tengo 20 años, me encuentro estudiando Ingeniería de Sistemas de Información en la Universidad Tecnológica Nacional. Poseo una sólida formación en programación.
+                    </p>
+                    <p>
+                      Automatización web con selenium (python, sqlAlchemy) + página web (html5, css)
+                      Aplicaciones y Juegos para android (java y c#) 
+                      Herramientas de pentesting en windows 11  (python, c++)
+                      Herramientas para hacking de juegos (c++)
+                      Utilidades para PC (python)
+                      Útiles Scripts de automatización en linux (bash)
+                    </p>
+                  </div>
               </div>
-              <div class="square">
-                <p>Website desginer</p>
-              </div>
-              <div class="square">
-                <p>Programmer</p>
-              </div>
-            </div>
-            <div class="arrow_down_circle">
-                <div class="arrow">></div>
-            </div>
+
+          </div>
+          <div class="page projects" id="projects">
           </div>
       </div>
-      <div class="projects">
-          <div class="profile_container">
-            
-          </div>
-      </div>
+
     <script>
         var opened = false;
         
@@ -97,6 +117,34 @@
                 opened=false;
             }
         })
+        
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    </script>
+      
+      
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+    VANTA.NET({
+      el: ".profile",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x4bf0,
+  backgroundColor: 0x7071b,
+  points: 15.00,
+  maxDistance: 21.00
+    })
     </script>
   </body>
   <footer>
