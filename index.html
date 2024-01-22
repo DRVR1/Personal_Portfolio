@@ -12,7 +12,7 @@
   <nav>
   </nav>
   <body>
-      <div class="full_container">
+      <div class="full_container" id="full_container">
           <div id="mobile_menu" class="mobile_menu slide_in_class">
               <div class="back_button"></div>
               <div class="mobile_menu_toolbar" id="#mobile_menu_toolbar">
@@ -104,6 +104,8 @@
             if (!opened){
                 burger.classList.add("invisible");
                 mobile_menu.classList.add("visible");
+                mobile_menu.classList.remove("slide_out_class");
+                mobile_menu.classList.add("slide_in_class");
                 document.body.style.overflow = 'hidden';
                 opened=true;
             }
@@ -113,7 +115,8 @@
             if (opened){
                 burger.classList.remove("invisible");
                 document.body.style.overflow = 'auto';
-                mobile_menu.classList.remove("visible");
+                mobile_menu.classList.add("slide_out_class");
+                mobile_menu.classList.remove("slide_in_class");
                 opened=false;
             }
         })
@@ -146,6 +149,7 @@
   maxDistance: 21.00
     })
     </script>
+
   </body>
   <footer>
   </footer>
