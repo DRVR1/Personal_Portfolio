@@ -6,10 +6,31 @@
     display:flex;
     justify-content:space-between;
     padding-top:30px;
-    position: sticky;
+    position:relative;
     z-index: 3;
 }
+.navbar_slide_in_class{
+    animation-name: navbar_slide_in_animation;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
 
+@keyframes navbar_slide_in_animation{
+    0%{
+        background-color: rgba(0, 0, 0, 0.74);
+        margin:0;
+        padding:0;
+        transition: 1s;
+        transform: translate(0,-100%);
+    }
+    100%{
+        background-color: rgba(0, 0, 0, 0.74);
+        margin:0;
+        padding:0;
+        transition: 1s;
+        transform: translate(0,0);
+    }
+}
 .static_navbar .title{
     height: 100%;
     padding:0;

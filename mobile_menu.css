@@ -35,7 +35,7 @@
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .slide_in_class{
-    animation-name:  slide_in_animation;
+    animation-name: slide_in_animation;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }

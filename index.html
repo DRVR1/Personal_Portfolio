@@ -34,7 +34,7 @@
           </div>
           <div class="navbar_separator"></div>
           <div class="page hero" id="hero">
-              <div class="static_navbar">
+              <div class="static_navbar" id="static_navbar">
                   <div class="title">
                     <img src="https://secure.webtoolhub.com/static/resources/icons/set181/5be2d6ea.png">
                     <p class="nav_title"><span class="initials">I</span>an <span class="initials">V</span>idmar</p>
@@ -77,33 +77,33 @@
 
           </div>
           <div class="page profile" id="profile">
-              <div class="blur">
                   <div class="profile_container">
                     <div class="profile_header">
                         <div class="photo_name">
                           <img class="profile_photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png">
-                          <h1>My Name</h1>
+                          <h1>Name Lastname</h1>
                         </div>
-                        <div class="profile_data">
-                         <h1>sometitle</h1>
-                         <p>somedata</p>
-                         <p>somedata</p>
-                         <p>somedata</p>
+                        <div class="profile_data_block">
+                         <h1><i class="bi bi-card-heading"></i> Quick Data</h1>
+                         <p>Age: ##</p>
+                         <p>Phone: +54 ## #### ###</p>
+                         <p>Country: Argentina</p>
+                         <p>Mail: namelastaname@gmail.com</p>
+                         <p>Languages: english/spanish</p>
                         </div>
                     </div>
+                    <hr>
                     <div class="profile_description">
+                      <h1>Some title</h1>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                       </p>
                       <p>
-                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                       </p>
                     </div>
 
                   </div>
-              </div>
-
           </div>
           <div class="page projects" id="projects">
           </div>
@@ -111,7 +111,6 @@
 
     <script>
         var opened = false;
-        
         const burger = document.querySelector("#burger_button");
         const mobile_menu = document.querySelector("#mobile_menu");
         const backbutton = document.querySelector(".back_button");
@@ -167,6 +166,25 @@ VANTA.NET({
 
 })
 </script>
+  <script>
+     //navbar changes to fixed when user scrolls to the other page
+     let container = document.getElementById('full_container');
+     let navbar = document.getElementById('static_navbar');
+     var navbarOffset = navbar.offsetTop;
+    
+     function handleScroll() {
+      if (container.scrollTop > 200) {
+        navbar.style.position = 'fixed';
+        navbar.classList.add("navbar_slide_in_class");
+      } else {
+        navbar.style.position = 'static';
+        navbar.classList.remove("navbar_slide_in_class");
+      }
+    }
+    container.onscroll = function() {
+      handleScroll();
+    };
+  </script>
   </body>
   <footer>
   </footer>
