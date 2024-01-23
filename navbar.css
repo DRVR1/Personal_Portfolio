@@ -1,0 +1,68 @@
+/*|==========================|NAVBAR|==========================|*/
+.static_navbar{
+    height:70px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    display:flex;
+    justify-content:space-between;
+    padding-top:30px;
+    position: sticky;
+    z-index: 3;
+}
+
+.static_navbar .title{
+    height: 100%;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:100px;
+}
+.static_navbar ul{
+    text-align: center;
+    margin:0;
+    margin-right: 100px;
+    max-width: auto;
+    height: 100%;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+.static_navbar .deco{
+    margin: 0 auto;
+    width:0%;
+    height: 2px;
+    background-color: #ffffff;
+    color:white;
+    transition: 0.5s;
+}
+
+.static_navbar a:hover + .deco{
+    width:60%;
+}
+.initials{
+    color:#75ffff;
+}
+.static_navbar a{
+    margin: 0 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+.nav_title{
+    color: #ffffff;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin:0;
+    font-size: 30px;
+    text-align: center;
+    cursor:default;
+}
+
+@media (max-width:967px) {
+    .static_navbar{
+        display:none;
+    }
+}
