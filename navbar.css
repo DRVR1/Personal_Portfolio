@@ -6,7 +6,6 @@
     display:flex;
     justify-content:space-between;
     padding-top:30px;
-    position:relative;
     z-index: 3;
 }
 .navbar_slide_in_class{
@@ -81,6 +80,7 @@
     text-align: center;
     cursor:default;
 }
+
 
 @media (max-width:967px) {
     .static_navbar{

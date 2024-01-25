@@ -16,6 +16,7 @@
   <nav>
   </nav>
   <body>
+      <!--co-->
       <div class="full_container" id="full_container">
           <div id="mobile_menu" class="mobile_menu slide_in_class">
               <div class="back_button"><i class="bi bi-chevron-double-right"></i></div>
@@ -23,18 +24,18 @@
                   <img class="logo" src="https://secure.webtoolhub.com/static/resources/icons/set181/5be2d6ea.png">
                     <p class="mobile_nav_title"><span class="initials">I</span>an <span class="initials">V</span>idmar</p>
                   <ul>
-                    <li><a href="#hero"><i class="bi bi-house-fill"></i> Home</a><div class="deco"></div></li>
-                    <li><a href="#profile"><i class="bi bi-person-fill"></i> Profile</a><div class="deco"></div></li>
-                    <li><a href="#projects"><i class="bi bi-file-earmark-code-fill"></i> Projects</a><div class="deco"></div></li>
-                    <li><a href="#asd"><i class="bi bi-basket2-fill"></i> Services</a><div class="deco"></div></li>
+                    <li onclick="scrollToSection('hero'); close_Navbar();"><a href="#hero"><i class="bi bi-house-fill"></i> Home</a><div class="deco"></div></li>
+                    <li onclick="scrollToSection('profile'); close_Navbar();"><a href="#profile"><i class="bi bi-person-fill"></i> Profile</a><div class="deco"></div></li>
+                    <li onclick="scrollToSection('projects'); close_Navbar();"><a href="#projects"><i class="bi bi-file-earmark-code-fill"></i> Projects</a><div class="deco"></div></li>
+                    <li onclick="scrollToSection('services'); close_Navbar();"><a href="#services"><i class="bi bi-basket2-fill"></i> Services</a><div class="deco"></div></li>
                     <hr>
-                    <li><a href="#asd"><i class="bi bi-eye-slash-fill"></i> Disable effects</a><div class="deco"></div></li>
+                    <li onclick="toggleVanta()"><a><i id="vanta_eye" class="bi bi-eye-fill"></i> Toggle Animated Background</a><div class="deco"></div></li>
                   </ul>
               </div>
 
           </div>
-          <div class="navbar_separator"></div>
           <div class="page hero" id="hero">
+              <div class="navbar_separator"></div>
               <div class="static_navbar" id="static_navbar">
                   <div class="title">
                     <img src="https://secure.webtoolhub.com/static/resources/icons/set181/5be2d6ea.png">
@@ -128,72 +129,14 @@
               </div>
           </div>
       </div>
-
-    <script>
-        var opened = false;
-        const burger = document.querySelector("#burger_button");
-        const mobile_menu = document.querySelector("#mobile_menu");
-        const backbutton = document.querySelector(".back_button");
-        
-        burger.addEventListener("click", () => {
-            console.log("Pressed.");
-            if (!opened){
-                burger.classList.add("invisible");
-                mobile_menu.classList.add("visible");
-                mobile_menu.classList.remove("slide_out_class");
-                mobile_menu.classList.add("slide_in_class");
-                document.body.style.overflow = 'hidden';
-                opened=true;
-            }
-        })
-        
-        backbutton.addEventListener("click", () => {
-            if (opened){
-                burger.classList.remove("invisible");
-                document.body.style.overflow = 'auto';
-                mobile_menu.classList.add("slide_out_class");
-                mobile_menu.classList.remove("slide_in_class");
-                opened=false;
-            }
-        })
-        
-      function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    </script>
-      
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 <script>
-VANTA.NET({
-  el: ".hero",
-  backgroundAlpha: 0,
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0xffffff,
-  backgroundColor: 0x0,
-  points: 8.00,
-  maxDistance: 17.00,
-  spacing: 18.00
-
-})
-</script>
-  <script>
      //navbar changes to fixed when user scrolls to the other page
      let container = document.getElementById('full_container');
      let navbar = document.getElementById('static_navbar');
      var navbarOffset = navbar.offsetTop;
     
      function handleScroll() {
-      if (container.scrollTop > 200) {
+      if (container.scrollTop > 728) {
         navbar.style.position = 'fixed';
         navbar.classList.add("navbar_slide_in_class");
       } else {
@@ -204,25 +147,88 @@ VANTA.NET({
     container.onscroll = function() {
       handleScroll();
     };
-  </script>
-  </body>
-  <footer>
+</script>
+<script>
+    //burger button and mobile navigation menu
+    var opened = false;
+    const burger = document.querySelector("#burger_button");
+    const mobile_menu = document.querySelector("#mobile_menu");
+    const backbutton = document.querySelector(".back_button");
 
-  </footer>
+    burger.addEventListener("click", () => {
+        if (!opened){
+            burger.classList.add("invisible");
+            mobile_menu.classList.add("visible");
+            mobile_menu.classList.remove("slide_out_class");
+            mobile_menu.classList.add("slide_in_class");
+            document.body.style.overflow = 'hidden';
+            opened=true;
+        }
+    })
+    function close_Navbar(){
+        if (opened){
+            burger.classList.remove("invisible");
+            document.body.style.overflow = 'auto';
+            mobile_menu.classList.add("slide_out_class");
+            mobile_menu.classList.remove("slide_in_class");
+            opened=false;
+        }
+    }
+    backbutton.addEventListener("click", () => {
+        close_Navbar();
+    })
+
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+//vanta.js background
+var vanta_background = null;
+
+function initializeVanta() {
+      vanta_background = VANTA.NET({
+      el: ".hero",
+      backgroundAlpha: 0,
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0xffffff,
+      backgroundColor: 0x0,
+      points: 8.00,
+      maxDistance: 17.00,
+      spacing: 18.00
+
+    })
+}
+initializeVanta();
+var vanta_enabled = true;
+var vanta_eye = document.querySelector("#vanta_eye");
+function toggleVanta(){
+    console.log("vanta toggled");
+    if (vanta_enabled){
+        vanta_eye.classList.add("bi-eye-slash-fill");
+        vanta_eye.classList.remove("bi-eye-fill");
+        vanta_background.destroy();
+        vanta_enabled = false;
+    }else{
+        vanta_eye.classList.remove("bi-eye-slash-fill");
+        vanta_eye.classList.add("bi-eye-fill");
+        initializeVanta();
+        vanta_enabled=true;
+    }
+}
+
+</script>
+</body>
 </html>
-
-<!-- 
-
-Your portfolio should have a welcome section with an id of welcome-section
-The welcome section should have an h1 element that contains text
-Your portfolio should have a projects section with an id of projects
-The projects section should contain at least one element with a class of project-tile to hold a project
-The projects section should contain at least one link to a project
-Your portfolio should have a navbar with an id of navbar
-The navbar should contain at least one link that you can click on to navigate to different sections of the page
-Your portfolio should have a link with an id of profile-link, which opens your GitHub or freeCodeCamp profile in a new tab
-Your portfolio should have at least one media query
-The height of the welcome section should be equal to the height of the viewport
-The navbar should always be at the top of the viewport
-
--->
