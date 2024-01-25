@@ -1,19 +1,54 @@
 .projects{
     background-color: #0b0b0b;
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.projects_title{
+    color:white;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 36px;
+}
 .projects_container{
-    width:900px;
-    height:500px;
-    background-color: white;
-    display:flex;
-
+    border-radius: 30px;
+    background-color:#333333;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 00px 00px 7px 10px #000000;
 }
 .project_box{
-    margin:10px;
-    width:100px;
-    height:100px;
+    margin:20px;
+    width:300px;
+    height:400px;
     background-color:grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 10px 10px 0.1px 0.1px rgba(0, 0, 0, 0.42);
+    border-radius: 30px;
+    transition: linear 0.1s;
+    
+}
+.project_box:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 2px 3px rgb(0, 0, 0);
+}
+@keyframes move_box {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(360deg);
+   }
+}
+
+.project_box h1{
+    color:#000000;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 36px;
 }
