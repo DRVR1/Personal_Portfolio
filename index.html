@@ -83,18 +83,20 @@
                     <div class="profile_header">
                         <div class="photo_name">
                           <img class="profile_photo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png">
-                          <h1>Name Lastname</h1>
+                          <h1>>Name Lastname</h1>
                         </div>
                         <div class="profile_data_block">
                          <h1><i class="bi bi-card-heading"></i> Quick Data</h1>
-                         <p>Age: ##</p>
-                         <p>Phone: +54 ## #### ###</p>
-                         <p>Country: Argentina</p>
-                         <p>Mail: namelastaname@gmail.com</p>
-                         <p>Languages: english/spanish</p>
+                         <p><span class="quick_data_variable">Age:</span> ##</p>
+                            <p><span class="quick_data_variable">Phone:</span> +54 ## #### ###</p>
+                            <p><span class="quick_data_variable">Country:</span> Argentina</p>
+                            <p><span class="quick_data_variable">Mail: </span> ############@gmail.com</p>
+                            <p><span class="quick_data_variable">Languages:</span> english/spanish</p>
                         </div>
                     </div>
-                    <hr>
+                    <div class="arrow_separator">
+                        <hr class="profile_hr">
+                    </div>
                     <div class="profile_description">
                       <h1>Some title</h1>
                       <p>
@@ -205,8 +207,8 @@ function initializeVanta() {
       scaleMobile: 1.00,
       color: 0xffffff,
       backgroundColor: 0x0,
-      points: 8.00,
-      maxDistance: 17.00,
+      points: 6.00,
+      maxDistance: 16.00,
       spacing: 18.00
 
     })

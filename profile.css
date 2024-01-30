@@ -2,7 +2,9 @@
 .profile{
     min-height:100vh;
     overflow: auto;
-    background: linear-gradient(35deg, rgba(255, 0, 0, 0.72) 0%, rgb(33, 4, 129) 100%); 
+    /*background: linear-gradient(35deg, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 100%);*/
+    background-color:#585858;
+
     backdrop-filter: blur(0px);
     display:flex;
     justify-content: center;
@@ -13,20 +15,42 @@
 }
 /*|===============|profile_general|===============|*/
 .profile .profile_container{
-    box-shadow: 10px -5px 5px black;
-    background-color:rgba(0, 0, 0, 0.76);
-    max-width:800px;
+    box-shadow: 10px 10px 10px #000000; 
+    background-color:rgba(52, 52, 52, 0.91);
+    backdrop-filter: blur(4px);
+    max-width:1000px;
     margin:100px;
     border-radius: 30px;
     padding:30px;
-    
     color:white;
     font-family: 'Montserrat', sans-serif;
 
 } 
-hr{
-    margin:10px;
+.arrow_separator{
+    margin:0;
+    margin-top:20px;
+    padding:0;
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    gap:0;
 }
+.profile_hr{
+    margin:0;
+    padding:0;
+    text-align: left;
+    margin:10px;
+    width:100%;
+    height:1px;
+    background-color:white;
+    flex-wrap: nowrap;
+    transition: 1s;
+}
+.arrow_separator p{
+    margin:0;
+    padding:0;
+}
+
 /*|===============|profile_header|===============|*/
 .profile_header{
     display: flex;
@@ -44,15 +68,20 @@ hr{
 }
 .profile_data_block{
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(255, 255, 255, 0.03);
     box-shadow: inset 0px 0px 10px rgb(0, 0, 0);
-
-    padding:3px 50px;
+    text-align: left;
+    padding:30px;
+}
+.profile_data_block h1{
+    text-align: center;
 }
 .profile_data h1{
     color:#ffffff;
 }
-
+.quick_data_variable{
+    color:#74ffff;
+}
 /*|===============|profile_description|===============|*/
 .profile_description{
     
@@ -77,19 +106,34 @@ hr{
     }
     .profile_header{
         flex-direction: column;
+        gap:0;
     }
 
     .profile_data_block{
-        padding:0;
-
+        padding: 20px;
     }
     .profile_description p{
  
     }
+    .profile_hr{
+     margin-top:20px;   
+    }
 }
-@media(max-width:740px){
+@media(max-width:700px){
     .profile .profile_container{
         margin:0;
         border-radius: 0;
     }
+}
+@media(max-width:338px){
+    .profile .profile_container{
+    }
+    .profile_description{
+        padding: 0 10px;
+    }
+    .profile_data_block{
+        backdrop-filter: blur(20px);
+        border-radius:30px;
+    }
+
 }
