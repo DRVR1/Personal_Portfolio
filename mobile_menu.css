@@ -106,6 +106,7 @@
     color: white;
     text-decoration:none;
     font-family: 'Montserrat Alternates',sans-serif;
+    user-select: none;
 }
 .mobile_menu li{
     border-bottom-left-radius: 30px;

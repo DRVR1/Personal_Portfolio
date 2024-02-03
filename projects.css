@@ -13,7 +13,7 @@
 .projects_container{
     border-radius: 30px;
     background-color:#333333;
-    padding: 10px 10px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,14 +29,14 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    box-shadow: 10px 10px 0.1px 0.1px rgba(0, 0, 0, 0.42);
+    
     border-radius: 30px;
     transition: linear 0.1s;
     
 }
 .project_box:hover{
-    transform: scale(1.2);
-    box-shadow: 0px 0px 2px 3px rgb(0, 0, 0);
+    box-shadow: 10px 10px 0px 1px rgb(0, 0, 0);
+
 }
 @keyframes move_box {
    0% {
