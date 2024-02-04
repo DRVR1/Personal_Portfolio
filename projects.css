@@ -29,13 +29,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
     border-radius: 30px;
     transition: linear 0.1s;
     
 }
 .project_box:hover{
-    box-shadow: 10px 10px 0px 1px rgb(0, 0, 0);
+    
 
 }
 @keyframes move_box {

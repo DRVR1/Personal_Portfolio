@@ -3,7 +3,7 @@ var vanta_background = null;
 
 function initializeVanta() {
   vanta_background = VANTA.NET({
-  el: ".hero",
+  el: ".full_container",
   backgroundAlpha: 0,
   mouseControls: true,
   touchControls: true,

@@ -5,7 +5,6 @@
     padding:0;
     width:100%;
     min-height:100vh;
-    background: linear-gradient(62deg, #7439a7 0%, #002089 100%); 
     overflow: hidden;
     display: flex;
     flex-direction: column;
