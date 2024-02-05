@@ -10,14 +10,13 @@
   --font_color_1: #ffffff;
   --font_color_2: #ffffff;
   --font_color_3: rgb(162, 162, 162);
-  --highlight_color_1: rgb(54, 240, 54);
+  --highlight_color_1: rgb(68, 183, 255);
   --highlight_color_2: rgb(227, 227, 227);
   --highlight_color_3: rgb(70, 70, 70);
-  --highlight_color_4: rgb(0, 62, 0);
+  --highlight_color_4: rgb(255, 255, 255);
+  --highlight_color_5: rgb(0, 69, 95);
   --button_color_1:#e74c3c;
-  --box_color_1:#e74c3c;
-  --box_color_2:#e74c3c;
-  --deco_ball_color_1: rgba(10, 234, 0, 0.11);
+  --deco_ball_color_1: rgba(0, 81, 234, 0.05);
 }
 
 html {
@@ -25,16 +24,19 @@ html {
  /* width */
 ::-webkit-scrollbar {
   width: 10px;
+  z-index: 3;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
+  z-index: 3;
   box-shadow: inset 0 0 5px #000000;
   background-color: rgb(34, 34, 34);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  z-index: 3;
   background: #ebebeb;
   border-radius: 100px;
 } 
@@ -50,10 +52,10 @@ body{
     /*scroll-snap-type: y mandatory;*/
     overflow-y: scroll;
     height:100vh;
-    scroll-behavior:smooth;
+    /*scroll-behavior:smooth;*/
 }
 .page{
-    scroll-snap-align: start;
+    /*scroll-snap-align: start;*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
@@ -64,27 +66,34 @@ body{
     width:500px;
     height:500px;
     background-color:var(--deco_ball_color_1);
-    filter: blur(100px);
     border-radius: 50%;
-    transition: 0s linear;
-    transform: translateX(00vh);
+    overflow: hidden;
+    pointer-events: none;
+    position:fixed;
+    z-index: 1;
+    transform: translate(-50%, -50%);
 }
 
 .ball_1_position{
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
+    top:60%;
+    left:20%;
+    filter: blur(100px);
 }
 .ball_2_position{
-    position:fixed;
-    top:50%;
-    left:70%;
+    top:20%;
+    left:10%;
+    width: 70px;
+    height: 70px;
+    filter: blur(50px);
+    
 }
 .ball_3_position{
     position:fixed;
-    top:10%;
-    left:10%;
+    width: 230px;
+    height: 400px;
+    top:60%;
+    left:90%;
+    filter: blur(50px);
 }
 
 .highlighted{

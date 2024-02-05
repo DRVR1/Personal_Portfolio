@@ -16,6 +16,9 @@
   <nav>
   </nav>
   <body>
+      <div class="deco_light_ball ball_1_position"></div>
+      <div class="deco_light_ball ball_2_position"></div>
+      <div class="deco_light_ball ball_3_position"></div>
       <div class="full_container" id="full_container">
           <div id="mobile_menu" class="mobile_menu slide_in_class">
               <div class="back_button"><i class="bi bi-chevron-double-right"></i></div>
@@ -28,7 +31,6 @@
                     <li onclick="scrollToSection('projects'); close_Navbar();"><a href="#projects"><i class="bi bi-file-earmark-code-fill"></i> Projects</a><div class="deco"></div></li>
                     <li onclick="scrollToSection('services'); close_Navbar();"><a href="#services"><i class="bi bi-basket2-fill"></i> Services</a><div class="deco"></div></li>
                     <hr>
-                    <li onclick="toggleVanta()"><a><i id="vanta_eye" class="bi bi-eye-fill"></i> Toggle Animated Background</a><div class="deco"></div></li>
                   </ul>
               </div>
 
@@ -52,9 +54,7 @@
                     <div class="bar"></div>
                     <div class="bar"></div>
               </div>
-              <div class="navbar_hr"></div>
               <div class="back_container">
-                  <div class="deco_light_ball ball_1_position"></div>
                   <div class="name_container">
                     <div class="img_container">
                     </div>
@@ -70,8 +70,8 @@
                         <p><i class="bi bi-code-square"></i> Programmer</p>
                       </div>
                     </div>
-                    <div class="arrow_down_circle" onclick="scrollToSection('profile')">
-                        <a class="arrow" onclick="scrollToSection('profile')">></a>
+                    <div class="arrow_down_circle" onclick="event.preventDefault(); scrollToSection('profile')">
+                        <a class="arrow" onclick="">></a>
                     </div>
                   </div>
               </div>

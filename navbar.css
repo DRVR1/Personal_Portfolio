@@ -1,11 +1,13 @@
 /*|==========================|NAVBAR|==========================|*/
 .static_navbar{
+    border-radius: 30px;
     height:70px;
-    width: 100%;
+    width: 90%;
     backdrop-filter: blur(5px);
     display:flex;
     justify-content:space-between;
     z-index: 3;
+    border-bottom: 1px solid var(--highlight_color_1);
 }
 .navbar_slide_in_class{
     animation-name: navbar_slide_in_animation;
@@ -89,6 +91,9 @@
 
 @media (max-width:967px) {
     .static_navbar{
+        display:none;
+    }
+    .navbar_hr{
         display:none;
     }
 }

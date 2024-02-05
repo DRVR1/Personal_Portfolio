@@ -2,15 +2,21 @@
 //navbar changes to fixed when user scrolls to the other page
 let container = document.getElementById('full_container');
 let navbar = document.getElementById('static_navbar');
-var navbarOffset = navbar.offsetTop;
+let navbar_container = document.getElementById('hero');
+let created = false;
 
 function handleScroll() {
-  if (container.scrollTop > 728) {
-    navbar.style.position = 'fixed';
-    navbar.classList.add("navbar_slide_in_class");
-  } else {
-    navbar.style.position = 'static';
-    navbar.classList.remove("navbar_slide_in_class");
+  if (container.scrollTop > 20) {
+    if(!created){
+        fixed_nav = navbar.cloneNode(true);
+        fixed_nav.style.position = 'fixed';
+        fixed_nav.classList.add("navbar_slide_in_class");
+        navbar_container.appendChild(fixed_nav);
+        created=true;
+    }
+  }else {
+    fixed_nav.remove();
+    created=false;
   }
 }
 container.onscroll = function() {
@@ -49,7 +55,7 @@ backbutton.addEventListener("click", () => {
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView();
     }
 }
 

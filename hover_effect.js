@@ -3,13 +3,12 @@ let enabled = true;
 function move(event){
     if(enabled){
         if(event.target && !event.target.classList.contains('hover_animation')){
-            console.log("returning");
             return;
         }
         const height = event.target.clientHeight;
         const width = event.target.clientWidth;
         const {layerX, layerY} = event;
-        const yRotation = (layerX - width / 2) / width * 20;
+        const yRotation = -1*((layerX - width / 2) / width * 20);
         const xRotation = (layerY - height / 2) / height * 20;
         const string = `
         perspective(500px)
@@ -17,7 +16,6 @@ function move(event){
         rotateX(${xRotation}deg)
         rotateY(${yRotation}deg)
         `;
-        console.log(event.target);
         event.target.style.transform = string;
     }
 }

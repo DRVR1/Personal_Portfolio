@@ -15,7 +15,6 @@
     background-repeat: no-repeat; 
     }
 
-
 .hero .img_container{
     text-align: center;
 }
@@ -23,7 +22,6 @@
     width:70px;
 }
 .back_container{
-    background-color: rgba(0, 0, 0, 0);
     width:100%;
     min-height:80vh;
     display:flex;
@@ -35,6 +33,7 @@
     background-color: var(--container_background_1);
     padding: 30px;
     border-radius: 60px;
+    z-index: 2;
 }
 
 .hero .name{
@@ -130,6 +129,17 @@
 }
 
 @media(max-width:683px){
+    .hero .square:hover{
+        transform: scale(1);
+    }
+    .arrow_down_circle:hover{
+        transform: scale(1) rotate(90deg);
+        border: 4px solid var(--highlight_color_2);
+    }
+    .arrow_down_circle:active{
+        transform: scale(1.2) rotate(90deg);
+        border: 4px solid var(--highlight_color_1);
+    }
     .hero .name:hover{
         transform: none;
     }
