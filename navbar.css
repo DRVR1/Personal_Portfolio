@@ -5,7 +5,6 @@
     backdrop-filter: blur(5px);
     display:flex;
     justify-content:space-between;
-    padding-top:30px;
     z-index: 3;
 }
 .navbar_slide_in_class{
@@ -54,8 +53,7 @@
     margin: 0 auto;
     width:0%;
     height: 2px;
-    background-color: #ffffff;
-    color:white;
+    background-color: var(--highlight_color_1);
     transition: 0.5s;
 }
 
@@ -63,17 +61,17 @@
     width:60%;
 }
 .initials{
-    color:#75ffff;
+    color:var(--font_color_3);
 }
 .static_navbar a{
     margin: 0 30px;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    color: var(--font_color_1);
     text-decoration: none;
     font-size: 30px;
 }
 .nav_title{
-    color: #ffffff;
+    color: var(--font_color_2);
     font-family: 'Montserrat Alternates', sans-serif;
     margin:0;
     font-size: 30px;
@@ -81,6 +79,13 @@
     cursor:default;
 }
 
+.navbar_hr{
+    background-color:var(--highlight_color_4);
+    width:100%;
+    height:5px;
+    margin:0;
+    margin-top:10px;
+}
 
 @media (max-width:967px) {
     .static_navbar{

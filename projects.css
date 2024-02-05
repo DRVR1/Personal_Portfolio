@@ -31,6 +31,7 @@
     text-align: center;
     border-radius: 30px;
     transition: linear 0.1s;
+    z-index: 1;
     
 }
 .project_box:hover{

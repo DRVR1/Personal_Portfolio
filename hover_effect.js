@@ -2,6 +2,10 @@ let enabled = true;
 
 function move(event){
     if(enabled){
+        if(event.target && !event.target.classList.contains('hover_animation')){
+            console.log("returning");
+            return;
+        }
         const height = event.target.clientHeight;
         const width = event.target.clientWidth;
         const {layerX, layerY} = event;

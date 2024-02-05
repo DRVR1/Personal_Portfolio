@@ -3,6 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+  --background_color_1: #000000;
+  --background_color_2: #000000;
+  --container_background_1: rgba(10, 10, 10, 0.63);
+  --font_color_1: #ffffff;
+  --font_color_2: #ffffff;
+  --font_color_3: rgb(162, 162, 162);
+  --highlight_color_1: rgb(54, 240, 54);
+  --highlight_color_2: rgb(227, 227, 227);
+  --highlight_color_3: rgb(70, 70, 70);
+  --highlight_color_4: rgb(0, 62, 0);
+  --button_color_1:#e74c3c;
+  --box_color_1:#e74c3c;
+  --box_color_2:#e74c3c;
+  --deco_ball_color_1: rgba(10, 234, 0, 0.11);
+}
+
 html {
 }
  /* width */
@@ -29,7 +46,7 @@ body{
 }
 .full_container{
     background: linear-gradient(62deg, #7439a7 0%, #002089 100%); 
-    background: linear-gradient(45deg, #422269 0%, #050717 60%); 
+    background: linear-gradient(45deg, var(--background_color_1) 0%, var(--background_color_2) 60%); 
     /*scroll-snap-type: y mandatory;*/
     overflow-y: scroll;
     height:100vh;
@@ -44,16 +61,32 @@ body{
     overflow: hidden;
 }
 .deco_light_ball{
-    width:100px;
-    height:100px;
-    background-color:white;
+    width:500px;
+    height:500px;
+    background-color:var(--deco_ball_color_1);
+    filter: blur(100px);
     border-radius: 50%;
-    position:fixed;
-    top:50%;
-    left:0;
-    transition: 1s linear;
-    
+    transition: 0s linear;
     transform: translateX(00vh);
 }
-@keyframes
 
+.ball_1_position{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.ball_2_position{
+    position:fixed;
+    top:50%;
+    left:70%;
+}
+.ball_3_position{
+    position:fixed;
+    top:10%;
+    left:10%;
+}
+
+.highlighted{
+    color: var(--highlight_color_1);
+}
