@@ -6,7 +6,7 @@
 :root {
   --background_color_1: #000000;
   --background_color_2: #000000;
-  --container_background_1: rgba(10, 10, 10, 0.63);
+  --container_background_1: rgba(255, 255, 255, 0.06);
   --font_color_1: #ffffff;
   --font_color_2: #ffffff;
   --font_color_3: rgb(162, 162, 162);
@@ -95,7 +95,14 @@ body{
     left:90%;
     filter: blur(50px);
 }
-
+.ball_4_position{
+    position:fixed;
+    width: 150px;
+    height: 150px;
+    top:60%;
+    left:60%;
+    filter: blur(50px);
+}
 .highlighted{
     color: var(--highlight_color_1);
 }
