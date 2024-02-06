@@ -7,7 +7,7 @@
     display:flex;
     justify-content:space-between;
     z-index: 3;
-    border-bottom: 1px solid var(--highlight_color_1);
+    border-bottom: 3px solid var(--highlight_color_5);
 }
 .navbar_slide_in_class{
     animation-name: navbar_slide_in_animation;

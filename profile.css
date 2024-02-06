@@ -12,7 +12,7 @@
 }
 /*|===============|profile_general|===============|*/
 .profile .profile_container{
-    box-shadow: 10px 10px 2px 0px var(--highlight_color_5); 
+    box-shadow: 5px 5px 0px 0px var(--highlight_color_5); 
     max-width:800px;
     margin:100px;
     border-radius: 30px;

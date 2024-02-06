@@ -34,6 +34,7 @@
     padding: 30px;
     border-radius: 60px;
     z-index: 2;
+    box-shadow: 5px 5px 0px 0px var(--highlight_color_5); 
 }
 
 .hero .name{
@@ -110,22 +111,25 @@
     margin: 0 auto;
     margin-top:25px;
     transition: transform 0.1s linear;
-    transform: rotate(90deg);
+    
+    text-align: center;
 }
 .arrow_down_circle:hover{
-    transform: scale(1.2) rotate(90deg);
+    transform: scale(1.2);
     border: 4px solid var(--highlight_color_1);
 }
 .arrow_down_circle:active{
-    transform: scale(1) rotate(90deg);
+    transform: scale(1);
 }
 .arrow_down_circle a{
     font-size: 70px;
-    font-family:'monserrat';
+    font-family:monospace;
+    text-align: center;
     color: var(--highlight_color_2);
     cursor:default;
     user-select: none;
     text-decoration: none;
+    
 }
 
 @media(max-width:683px){
@@ -133,11 +137,11 @@
         transform: scale(1);
     }
     .arrow_down_circle:hover{
-        transform: scale(1) rotate(90deg);
+        transform: scale(1);
         border: 4px solid var(--highlight_color_2);
     }
     .arrow_down_circle:active{
-        transform: scale(0.9) rotate(90deg);
+        transform: scale(0.9);
         border: 4px solid var(--highlight_color_1);
     }
     .hero .name:hover{
