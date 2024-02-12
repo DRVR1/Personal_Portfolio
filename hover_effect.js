@@ -20,6 +20,7 @@ function move(event){
     }
 }
 
+
 function out(event){
     event.target.style.transform = `
     scale(1)
@@ -28,6 +29,7 @@ function out(event){
     `
     enabled=true;
 }
+/*
 
 function disable(event){
     enabled=false;
@@ -37,10 +39,14 @@ function disable(event){
     rotateY(0deg)
     `
 }
+*/
 
 const hover_elements = document.getElementsByClassName("hover_animation");
 for(let i = 0; i<hover_elements.length;i++){
     hover_elements[i].addEventListener('mousemove',move);
+    /*
     hover_elements[i].addEventListener('click',disable);
+    */
     hover_elements[i].addEventListener('mouseleave',out);
+    
 }

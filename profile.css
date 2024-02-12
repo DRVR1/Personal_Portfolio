@@ -92,7 +92,7 @@
 .profile_description p{
     color: white;
     font-family:sans-serif;
-    font-size: 21px;
+    font-size: var(--font_size_description_sans);
 }
 /*|===============|mobile_device|===============|*/
 @media(max-width:800px){

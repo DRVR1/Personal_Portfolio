@@ -52,6 +52,7 @@
     list-style-type: none;
 }
 .static_navbar .deco{
+    transform: translate(0px,-10px);
     margin: 0 auto;
     width:0%;
     height: 2px;
@@ -65,13 +66,27 @@
 .initials{
     color:var(--font_color_3);
 }
+
+.static_navbar li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:100%;
+}
+
 .static_navbar a{
+    text-align: center;
+    width:100%;
+    text-align: center;
     margin: 0 30px;
     font-family: 'Montserrat', sans-serif;
     color: var(--font_color_1);
     text-decoration: none;
     font-size: 30px;
+    padding: 15px 0;
 }
+
 .nav_title{
     color: var(--font_color_2);
     font-family: 'Montserrat Alternates', sans-serif;

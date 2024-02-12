@@ -17,6 +17,8 @@
   --highlight_color_5: rgb(0, 69, 95);
   --button_color_1:#e74c3c;
   --deco_ball_color_1: rgba(0, 81, 234, 0.05);
+  --font_size_description_sans: 21px;
+  --font_size_description_montserrat: 19px;
 }
 
 html {
