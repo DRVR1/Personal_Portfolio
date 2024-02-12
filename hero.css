@@ -161,6 +161,7 @@
 }
 @media(max-width:460px){
     .name_container{
+        width: 100%;
         padding:30px 0;
         border-radius: 0;
     }

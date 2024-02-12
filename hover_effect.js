@@ -1,7 +1,23 @@
 let enabled = true;
+let mobile = false;
+
+const mediaQuery = window.matchMedia("(max-width: 967px)");
+
+mediaQuery.addListener((event) => {
+  if (event.matches) {
+      mobile =true;
+  } else {
+    mobile=false;
+  }
+});
+
+//for reloads
+if (document.body.clientWidth < 967) {
+   mobile=true;
+}
 
 function move(event){
-    if(enabled){
+    if(enabled && !mobile){
         const height = event.target.clientHeight;
         const width = event.target.clientWidth;
         const {layerX, layerY} = event;
@@ -57,5 +73,4 @@ for(let i = 0; i<hover_elements.length;i++){
     hover_elements[i].addEventListener('click',goto);
 
     hover_elements[i].addEventListener('mouseleave',out);
-    
 }

@@ -106,6 +106,19 @@
 
 @media (max-width:967px) {
     .static_navbar{
+        height:100px;
+        align-items: center;
+        display:flex;
+        justify-content: flex-end;
+        top:0;
+        border-radius: 0;
+        width: 100%;
+
+    }
+    .static_navbar .title{
+        display: none;
+    }
+    .static_navbar ul{
         display:none;
     }
     .navbar_hr{
