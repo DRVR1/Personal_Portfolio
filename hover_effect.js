@@ -2,9 +2,6 @@ let enabled = true;
 
 function move(event){
     if(enabled){
-        if(event.target && !event.target.classList.contains('hover_animation')){
-            return;
-        }
         const height = event.target.clientHeight;
         const width = event.target.clientWidth;
         const {layerX, layerY} = event;
@@ -40,13 +37,25 @@ function disable(event){
     `
 }
 */
+function goto(event){
+    console.log("clicked");
+    if(event.target.classList.contains('instagrow')){
+        window.open("https://www.github.com/DRVR1/InstaGrow", "_blank");
+    }
+    if(event.target.classList.contains('filecrypt')){
+        window.open('https://www.github.com/DRVR1/FileCrypt', "_blank");
+    }
+    if(event.target.classList.contains('csgoadmin2')){
+        window.open('https://www.github.com/DRVR1/Csgo_Admin_2', "_blank");
+    }
+}
 
 const hover_elements = document.getElementsByClassName("hover_animation");
 for(let i = 0; i<hover_elements.length;i++){
     hover_elements[i].addEventListener('mousemove',move);
-    /*
-    hover_elements[i].addEventListener('click',disable);
-    */
+
+    hover_elements[i].addEventListener('click',goto);
+
     hover_elements[i].addEventListener('mouseleave',out);
     
 }

@@ -1,4 +1,5 @@
 .projects{
+    margin-top:200px;
     background-color: rgba(38, 0, 0, 0);
     display:flex;
     flex-direction: column;
@@ -9,7 +10,20 @@
 .projects_title{
     color:white;
     font-family: 'Montserrat',sans-serif;
-    font-size: 36px;
+    font-size: 90px;
+ /* Set a fallback background color for older browsers */
+    background-color: #ffffff;
+    background-image: linear-gradient(45deg,hsl(0, 0%, 44%),hsl(0, 0%, 100%),hsl(0, 0%, 86%) );
+
+  /* Ensure background covers the text and is clipped to its shape */
+    background-size: 100% 100%;
+    background-clip: text;
+    -webkit-background-clip: text; /* Webkit prefix for older browsers */
+
+  /* Remove default text color (only necessary if using transparent fill color) */
+    color: transparent;
+    -webkit-text-fill-color: transparent; /* Webkit prefix for older browsers */
+
 }
 .projects_container{
     max-width:90%;
@@ -33,7 +47,7 @@
     text-align: center;
     transition: linear 0.1s;
     z-index: 1;
-    
+    cursor:pointer;
 }
 
 .project_box img{
@@ -86,4 +100,14 @@
     font-family: 'Montserrat',sans-serif;
     font-size: var(--font_size_description_montserrat);
     text-align: left;
+}
+
+/*|===============|mobile_device|===============|*/
+@media(max-width:700px){
+    .projects_container{
+        margin:0;
+        border-radius: 0;
+        box-shadow: none;
+        max-width: none;
+    }
 }
