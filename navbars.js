@@ -6,7 +6,6 @@ let navbar_container = document.getElementById('hero');
 let created = false;
 
 function burger_onclick(){
-    console.log('clicked');
     if (!opened){
         burger.classList.add("invisible");
         mobile_menu.classList.add("visible");

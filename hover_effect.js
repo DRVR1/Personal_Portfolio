@@ -54,7 +54,6 @@ function disable(event){
 }
 */
 function goto(event){
-    console.log("clicked");
     if(event.target.classList.contains('instagrow')){
         window.open("https://www.github.com/DRVR1/InstaGrow", "_blank");
     }

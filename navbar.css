@@ -106,7 +106,6 @@
 
 @media (max-width:967px) {
     .static_navbar{
-        height:100px;
         align-items: center;
         display:flex;
         justify-content: flex-end;
